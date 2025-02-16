@@ -24,7 +24,7 @@ def format_reward(completions, **kwargs) -> list[float]:
 
     return reward_list
 
-def accuracy_reward(completions, **kwargs):
+def accuracy_reward(completions, **kwargs) -> list[float]:
     """Evaluates completions by checking if they match the correct solution."""
     solutions = kwargs.get("solution", [])
     completion_contents = [c[0]["content"] for c in completions]
